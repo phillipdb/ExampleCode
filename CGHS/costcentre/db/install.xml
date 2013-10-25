@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="report/cghs_costcentre/db" VERSION="20130625" COMMENT="XMLDB file for Moodle report/cghs_costcentre"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="cghs_cost_centre_manager" COMMENT="Default comment for cghs_costcentre, please edit me" NEXT="cghs_cost_centre">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="costcentreid"/>
+        <FIELD NAME="costcentreid" TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false" COMMENT="Cost centre id." PREVIOUS="id" NEXT="ccmanageruserid"/>
+        <FIELD NAME="ccmanageruserid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="cost centre manager id" PREVIOUS="costcentreid" NEXT="timecreated"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false" COMMENT="time record created" PREVIOUS="ccmanageruserid"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="cghs_cost_centre" COMMENT="Default comment for the table, please edit me" PREVIOUS="cghs_cost_centre_manager">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="name"/>
+        <FIELD NAME="name" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="name of cost centre" PREVIOUS="id" NEXT="timecreated"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false" COMMENT="timecreated" PREVIOUS="name"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>

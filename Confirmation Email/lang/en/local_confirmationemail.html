@@ -1,0 +1,22 @@
+<?php
+/**
+ * Blast - confirmation email 
+ *
+ * String definitions
+ *
+ * @package    local
+ * @subpackage confirmationemail
+ * @author     Phillip Bennett, Pukunui (http://pukunui.com)
+ * @copyright  2013 BLAST
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+defined('MOODLE_INTERNAL') || die();
+
+$string['subject'] = 'New user has been confirmed on the Moodle site.';
+$string['emailsent'] = 'Request successfully sent';
+$string['messagetext'] = '
+User {$a->firstname} {$a->lastname}, {$a->email} has just confirmed their account in Moodle.
+
+To view this account <a href="http://online.blasttraining.com.au/user/profile.php?id={$a->id}">click here</a>
+';

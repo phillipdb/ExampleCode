@@ -1,0 +1,1 @@
+This email is sent to the support accounts email address once a user has clicked on the pink in their confirmation email.
